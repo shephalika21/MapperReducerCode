@@ -17,8 +17,6 @@ public class ModeTemperature extends Configured implements Tool {
   public static class ModeTemperatureMapper
       extends Mapper<LongWritable, Text, LongWritable, LongWritable> {
 
-    private Record avgTemp = null;
-
     public void map(LongWritable k, Text v, Context context) {
       Record record = new Record();
       try {
@@ -39,7 +37,7 @@ public class ModeTemperature extends Configured implements Tool {
     }catch(Exception e){
       e.getMessage();
     }
-}
+  }
 }
 
 
